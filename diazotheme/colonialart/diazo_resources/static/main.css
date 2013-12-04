@@ -1,0 +1,39 @@
+#visual-portal-wrapper { width: 920px; margin: 0 auto; }
+
+/*
+a:link, a:visited, #content a:link, #content a:visited, dl.portlet a:link, dl.portlet a:visited {
+color: red;
+}
+*/
+
+#banner {
+  clear: both;
+  overflow: hidden;
+}
+
+#portal-globalnav, #portal-globalnav li a {
+  color: #fff;
+  background-color: #7A663B;
+}
+#portal-globalnav .selected a,
+#portal-globalnav .selected a:hover,
+#portal-globalnav a:hover {
+  background-color: #834B2D;
+  color: #fff;
+}
+
+#portal-globalnav li a {
+  padding: 0.5em 1em;
+}
+
+/* If you want to hide the path bar (aka. breadcrumbs), uncomment the below: */
+
+/*
+#breadcrumbs-you-are-here,
+#breadcrumbs-home,
+#breadcrumbs-current,
+#breadcrumbs-1 {
+display: none;
+}
+*/
+

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- Apply the following rules to standard Plone pages -->
+    <rules css:if-content="#visual-portal-wrapper">
+
+        <theme href="index.html" />
+        <notheme css:if-content="body.template-manage-portlets" />
+
+        <!-- Replace title with Plone's page title  -->
+        <replace css:theme="html head title" css:content="html head title" />
+
+        <!-- Drop the favicon spec coming from content; we'll use the one in the theme. -->
+        <drop content="/html/head/link[@rel='shortcut icon']" />
+
+        <!-- Copy base tag from Plone -->
+        <before css:theme-children="html head" css:content="html head base" />
+
+        <!-- Copy link, style, meta tags from Plone head -->
+        <after css:theme-children="html head"
+               content="/html/head/link | /html/head/style | /html/head/meta" />
+
+        <!-- merge classes from Plone body with theme body -->
+        <merge attributes="class" css:theme="body" css:content="body" />
+
+        <!-- Copy script tags from Plone head to end of body -->
+        <after css:theme-children="html body" css:content="html head script" />
+
+        <!-- Move inline scripts in content to end of body -->
+        <drop css:content="body script" />
+        <after css:theme-children="html body" css:content="html body script" method="raw" />
+
+        <before css:theme-children="#visual-portal-wrapper" css:content="#portal-personaltools-wrapper" css:if-content="#personaltools-logout" />
+
+        <merge attributes="href" css:theme="#banner a" css:content="#portal-logo" />
+
+        <drop css:content="div.searchSection" />
+
+        <replace css:theme="#hidden-nav" css:content="#portal-header p:first-child" />
+
+        <replace css:theme="#portal-searchbox" css:content="#portal-searchbox" />
+
+        <replace css:theme="#portal-globalnav" css:content="#portal-globalnav" />
+
+        <replace css:theme-children="#portal-column-content" css:content-children="#portal-column-content" />
+
+        <replace css:theme-children="#portal-footer-wrapper" css:content-children="#portal-column-one" />
+
+        <after css:theme="#portal-footer-wrapper" css:content="#portal-siteactions" />
+
+
+    </rules>
+
+</rules>
