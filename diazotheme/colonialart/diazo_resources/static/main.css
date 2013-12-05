@@ -26,14 +26,181 @@ color: red;
   padding: 0.5em 1em;
 }
 
-/* If you want to hide the path bar (aka. breadcrumbs), uncomment the below: */
+.citem a {
+    border: none !important;
+    text-decoration: none;
+}
+table.citem {
+    background-color: #7A663B;
+}
+table.active {
+    background-color: #fff;
+    box-shadow: 0 0 20px #000;
+}
+.items a div {
+    float: left;
+    text-align: center;
+    padding-right: 4px;
+}
+.citem img {
+    vertical-align: bottom;
+}
+.citem a:first-child {
+  margin-right: 6px;
+}
+.cblock {
+    width: 840px;
+    text-align: center;
+}
+
+
+a.browse {
+    height: 152px;
+    width: 24px;
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+a.browse.left {
+    background: url(nav-left.png) no-repeat 0 50%;
+}
+a.browse.right {
+    background: url(nav-right.png) no-repeat 0 50%;
+}
+a.browse.disabled {
+    background: none;
+    cursor: default;
+}
+
+/* items inside navigator */
+.navi a {
+    width:8px;
+    height:8px;
+    float:left;
+    margin:3px;
+    background:url(navigator.png) 0 0 no-repeat;
+    display:block;
+    font-size:1px;
+}
+
+/* mouseover state */
+.navi a:hover {
+    background-position:0 -8px;
+}
+
+/* active state (current page state) */
+.navi a.active {
+    background-position:0 -16px;
+}
 
 /*
-#breadcrumbs-you-are-here,
-#breadcrumbs-home,
-#breadcrumbs-current,
-#breadcrumbs-1 {
-display: none;
-}
+root element for the scrollable.  when scrolling occurs this
+element stays still.
 */
+.scrollable {
+  /* required settings */
+  position:relative;
+  overflow:hidden;
+  width: 840px;
+  height: 152px;
+  background-color: #834B2D;
+  float: left;
+}
 
+/*
+root element for scrollable items. Must be absolutely positioned
+and it should have a extremely large width to accommodate scrollable
+items.  it's enough that you set width and height for the root element
+and not for this element.
+*/
+.scrollable .items {
+  /* this cannot be too large */
+  width:20000em;
+  position:absolute;
+}
+
+/*
+a single item. must be floated in horizontal scrolling.  typically,
+this element is the one that *you* will style the most.
+*/
+.items .cblock {
+  float:left;
+  width: 840px;
+  text-align: center;
+  padding: 6px 0;
+}
+table.citem {
+  display: inline-block;
+  padding: 6px;
+  margin: 0 6px 0 0;
+}
+table.citem:last-child {
+  margin: 0;
+}
+.items .citem tr {
+  vertical-align: bottom;
+}
+table.citem td {
+    height: 128px;
+}
+
+.navi-wrapper {
+    width: 840px;
+    margin: 0 24px;
+    text-align: center;
+    background-color:#834B2D;
+    padding-bottom: 4px;
+}
+.navi {
+    width: auto;
+    margin: 0 auto;
+    display: inline-block;
+}
+
+#image_wrap {
+    /* dimensions */
+    display: block;
+    width: 840px;
+    height: 420px;
+    float: left;
+    padding: 15px 0;
+    text-align:center;
+    background-color:#834B2D;
+}
+#image_wrap img {
+    box-shadow: 0 0 20px #000;
+}
+.cdiv {
+    display: inline-block;
+}
+.navimage {
+    display: block;
+    height: 420px;
+    width: 24px;
+    float: left;
+    padding: 0;
+    margin: 0;
+}
+.nextimage, .previmage {
+    height: 420px;
+    width: 24px;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+.previmage {
+    background: url(nav-left.png) no-repeat 0 50%;
+}
+.nextimage {
+    background: url(nav-right.png) no-repeat 0 50%;
+}
+
+#image_wrap td a {
+    color: #fff !important;
+}
+#image_wrap td {
+  padding-top: 12px;
+}
+.cdiv:first-child {
+    margin-right: 6px;
+}
