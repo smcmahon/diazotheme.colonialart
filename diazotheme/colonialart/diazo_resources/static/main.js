@@ -2,6 +2,7 @@
 
 /*jslint white:false, onevar:true, undef:true, nomen:true, eqeqeq:true, plusplus:true, bitwise:true, regexp:true, newcap:true, immed:true, strict:false, browser:true */
 /*global jQuery:false, document:false, window:false, location:false */
+
 $(function() {
     // initialize scrollable
     $("#navigator")
@@ -10,6 +11,7 @@ $(function() {
 
     var api = $("#navigator").data("scrollable");
 
+    // on clicking a thumb, display preview
     $('table.citem').click(function(event) {
         var jqthis = $(this),
             url = jqthis.find('a').attr('href'),
@@ -40,6 +42,7 @@ $(function() {
 
     }).filter(":first").click();
 
+    // preview right
     $(".nextimage").on('click', function(event) {
         var active = $('table.active'),
             next = active.next('table.citem');
@@ -54,6 +57,7 @@ $(function() {
             }
         }
     });
+    // preview left
     $(".previmage").on('click', function(event) {
         var active = $('table.active'),
             prev = active.prev('table.citem');
@@ -70,6 +74,19 @@ $(function() {
     });
 
     $(".major_wrapper").fadeIn();
+
+    // archive outline expand/contract
+    $(".archive_list ul li.aparent").on('click', function(event) {
+        var jqt = $(this),
+            jqn = jqt.next()
+            was_showing = jqn.css('display') != 'none';
+
+        jqn.slideToggle();
+        jqt.toggleClass('hidden');
+
+    });
+
+    $('.archive_list ul:hidden').prev().addClass('hidden');
 
 });
 

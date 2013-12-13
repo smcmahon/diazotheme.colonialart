@@ -1,4 +1,4 @@
-#visual-portal-wrapper { width: 920px; margin: 0 auto; }
+#visual-portal-wrapper { width: 960px; margin: 0 auto; }
 
 /*
 a:link, a:visited, #content a:link, #content a:visited, dl.portlet a:link, dl.portlet a:visited {
@@ -203,4 +203,23 @@ table.citem td {
 }
 .cdiv:first-child {
     margin-right: 6px;
+}
+
+.archive_list ul {
+    display: none;
+    cursor: pointer;
+}
+.archive_list ul.depth0 {
+    display: block;
+}
+.archive_list ul li {
+    list-style-type: none;
+}
+.archive_list ul li.aparent:before {
+    content: " - ";
+    font-weight: bold;
+    font-size: larger;
+}
+.archive_list ul li.aparent.hidden:before {
+    content: " + ";
 }
