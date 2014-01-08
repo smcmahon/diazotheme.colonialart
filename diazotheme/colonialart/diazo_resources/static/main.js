@@ -27,7 +27,12 @@ $(function() {
         jqthis.addClass("active");
 
         image_wrap.children().fadeOut();
-        image_wrap.load(url + " #content-core > *");
+	image_wrap.load(url + " #content-core > *", function () {
+		$('table.preview-image-wrapper a').prepOverlay({
+			subtype: 'ajax',
+			filter: '#content > *'
+		})
+	});
 
         if ((api.getIndex() > 0) || jqthis.prev('.citem').length) {
             $('.previmage').show();
