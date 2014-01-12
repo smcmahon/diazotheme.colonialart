@@ -30,7 +30,8 @@ $(function() {
 	image_wrap.load(url + " #content-core > *", function () {
 		$('table.preview-image-wrapper a').prepOverlay({
 			subtype: 'ajax',
-			filter: '#content > *'
+			filter: '#content-core > *',
+			config: {mask:'#834b2d'}
 		})
 	});
 

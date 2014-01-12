@@ -49,7 +49,7 @@ table.active {
   margin-right: 4px;
 }
 .cblock {
-    width: 840px;
+    width: 900px;
     text-align: center;
 }
 
@@ -63,9 +63,11 @@ a.browse {
 }
 a.browse.left {
     background: url(nav-left.png) no-repeat 0 50%;
+    float: left;
 }
 a.browse.right {
     background: url(nav-right.png) no-repeat 0 50%;
+    float: right;
 }
 a.browse.disabled {
     background: none;
@@ -101,11 +103,10 @@ element stays still.
   /* required settings */
   position:relative;
   overflow:hidden;
-  width: 840px;
+  width: 900px;
   height: 152px;
   background-color: #fff;
   float: left;
-  border: 1px solid #834B2D;
 }
 
 /*
@@ -126,14 +127,14 @@ this element is the one that *you* will style the most.
 */
 .items .cblock {
   float:left;
-  width: 840px;
+  width: 900px;
   text-align: center;
   padding: 6px 0;
 }
 table.citem {
   display: inline-block;
   padding: 6px;
-  margin: 0 6px 0 0;
+  margin: 0 24px 0 0;
 }
 table.citem:last-child {
   margin: 0;
@@ -146,7 +147,7 @@ table.citem td {
 }
 
 .navi-wrapper {
-    width: 840px;
+    width: 900px;
     margin: 0 24px;
     text-align: center;
     background-color: #fff;
@@ -161,16 +162,12 @@ table.citem td {
 #image_wrap {
     /* dimensions */
     display: block;
-    width: 840px;
+    width: 900px;
     height: 440px;
     float: left;
     padding: 15px 0;
     text-align:center;
     background-color: #fff;
-    border: 1px solid #834b2d;
-}
-.cdiv {
-    display: inline-block;
 }
 .navimage {
     display: block;
@@ -179,6 +176,9 @@ table.citem td {
     float: left;
     padding: 0;
     margin: 0;
+}
+.navimage.right {
+    float: right;
 }
 .nextimage, .previmage {
     height: 420px;
@@ -200,9 +200,6 @@ table.citem td {
 #image_wrap td {
   padding-top: 12px;
 }
-.cdiv:first-child {
-    margin-right: 6px;
-}
 
 .archive_list ul {
     display: none;
@@ -215,25 +212,23 @@ table.citem td {
     list-style-type: none;
 }
 .archive_list ul li.aparent:before {
-    content: " - ";
-    font-weight: bold;
-    font-size: larger;
+    content: " \25bc ";
+    color: #666;
+    padding: 0 0.5em 0 0;
 }
 .archive_list ul li.aparent.hidden:before {
-    content: " + ";
+    content: " \25b6 ";
+    color: #666;
+    padding: 0 0.5em 0 0;
 }
 
-.cdiv {
-    display: inline-block;
-}
 #content table.preview-image-wrapper {
-    height: 400px;
     border-collapse: separate;
-    border-spacing: 6px;
+    width: 100%
 }
 .preview-image-wrapper th {
     height: 400px;
-    vertical-align: middle;
+    vertical-align: top;
     text-align: center;
 }
 .preview-image-wrapper td {
@@ -242,4 +237,29 @@ table.citem td {
 }
 .bdiv {
     margin: 0 auto;
+}
+
+#scrollable_wrapper {
+    border: 1px solid #834b2d;
+    width: 100%;
+}
+
+#preview_wrapper {
+    border: 1px solid #834b2d;
+    width: 100%;
+}
+
+.pb-ajax .artwork_view h1 {
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid #834b2d;
+}
+.pb-ajax .artwork_view img {
+    float: left;
+    padding: 0 1em 1em 0;
+}
+.artwork_view dt {
+    font-size: 125%;
+}
+.artwork_view dl {
+    margin-bottom: 1em;
 }
