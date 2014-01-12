@@ -12,9 +12,11 @@ $(function() {
     var api = $("#navigator").data("scrollable");
 
     // on clicking a thumb, display preview
-    $('table.citem').click(function(event) {
+    var citems = $('table.citem').click(function(event) {
         var jqthis = $(this),
             url = jqthis.find('a').attr('href'),
+	    path_elements = url.split('/'),
+	    url_id = path_elements[path_elements.length - 1],
             image_wrap = $('#image_wrap');
 
         event.preventDefault();
@@ -35,18 +37,39 @@ $(function() {
 		})
 	});
 
-        if ((api.getIndex() > 0) || jqthis.prev('.citem').length) {
-            $('.previmage').show();
-        } else {
-            $('.previmage').hide();
-        }
-        if ((api.getIndex() + 1 < api.getSize()) || $('table.active').next('.citem').length) {
-            $('.nextimage').show();
-        } else {
-            $('.nextimage').hide();
-        }
+	if (window.location.hash != 'c' + url_id) {
+	    window.location.hash = 'c' + url_id;
+	}
 
-    }).filter(":first").click();
+	window.setTimeout(function () {
+	    api.seekTo(Math.floor($('.citem').index(jqthis) / 3), 0);
+            if ((api.getIndex() > 0) || jqthis.prev('.citem').length) {
+                $('.previmage').show();
+            } else {
+                $('.previmage').hide();
+            }
+            if ((api.getIndex() + 1 < api.getSize()) || $('table.active').next('.citem').length) {
+                $('.nextimage').show();
+            } else {
+                $('.nextimage').hide();
+            }
+	}, 1000);
+    });
+
+    function jump_by_hash() {
+	$(window.location.hash.replace('#c', '#')).click();
+    }
+	
+    
+    if (window.location.hash) {
+	jump_by_hash();
+    } else {
+        citems.filter(":first").click();
+    }
+
+    $(window).bind( 'hashchange', function(event) {
+	jump_by_hash();
+    });
 
     // preview right
     $(".nextimage").on('click', function(event) {
