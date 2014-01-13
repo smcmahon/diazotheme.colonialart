@@ -4,6 +4,11 @@
 /*global jQuery:false, document:false, window:false, location:false */
 
 $(function() {
+
+    $('.template-gallery_view #breadcrumbs-current').wrap('<a href="' + window.location + '">');
+    $('.template-gallery_view #breadcrumbs-current').parent()
+	.after('<span class="breadcrumbSeparator">\n&gt;\n</span><span id="breadcrumb-active" />');
+
     // initialize scrollable
     $("#navigator")
         .scrollable()
@@ -40,6 +45,8 @@ $(function() {
 	if (window.location.hash != 'c' + url_id) {
 	    window.location.hash = 'c' + url_id;
 	}
+
+	$('#breadcrumb-active').html(url_id);
 
 	window.setTimeout(function () {
 	    api.seekTo(Math.floor($('.citem').index(jqthis) / 3), 0);
