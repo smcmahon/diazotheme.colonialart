@@ -20,8 +20,8 @@ $(function() {
     var citems = $('table.citem').click(function(event) {
         var jqthis = $(this),
             url = jqthis.find('a').attr('href'),
-	    path_elements = url.split('/'),
-	    url_id = path_elements[path_elements.length - 1],
+            path_elements = url.split('/'),
+            url_id = path_elements[path_elements.length - 1],
             image_wrap = $('#image_wrap');
 
         event.preventDefault();
@@ -34,22 +34,22 @@ $(function() {
         jqthis.addClass("active");
 
         image_wrap.children().fadeOut();
-	image_wrap.load(url + " #content-core > *", function () {
-		$('table.preview-image-wrapper a').prepOverlay({
-			subtype: 'ajax',
-			filter: '#content-core > *',
-			config: {mask:'#834b2d'}
-		})
-	});
+        image_wrap.load(url + " #content-core > *", function () {
+            $('table.preview-image-wrapper a').prepOverlay({
+                subtype: 'ajax',
+                filter: '#content-core > *',
+                config: {mask: '#834b2d'}
+            });
+            $('#breadcrumb-active').html($('.bdiv h1').html());
+        });
 
-	if (window.location.hash != 'c' + url_id) {
-	    window.location.hash = 'c' + url_id;
-	}
+        if (window.location.hash != 'c' + url_id) {
+            window.location.hash = 'c' + url_id;
+        }
 
-	$('#breadcrumb-active').html(url_id);
+        window.setTimeout(function () {
+            api.seekTo(Math.floor($('.citem').index(jqthis) / 3), 0);
 
-	window.setTimeout(function () {
-	    api.seekTo(Math.floor($('.citem').index(jqthis) / 3), 0);
             if ((api.getIndex() > 0) || jqthis.prev('.citem').length) {
                 $('.previmage').show();
             } else {
@@ -60,14 +60,14 @@ $(function() {
             } else {
                 $('.nextimage').hide();
             }
-	}, 1000);
+        }, 1000);
     });
 
     function jump_by_hash() {
 	$(window.location.hash.replace('#c', '#')).click();
     }
-	
-    
+
+
     if (window.location.hash) {
 	jump_by_hash();
     } else {
