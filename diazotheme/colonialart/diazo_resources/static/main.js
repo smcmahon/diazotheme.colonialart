@@ -35,12 +35,15 @@ $(function() {
 
         image_wrap.children().fadeOut();
         image_wrap.load(url + " #content-core > *", function () {
+            var ctitle = $('.bdiv h1').html();
+
             $('table.preview-image-wrapper a').prepOverlay({
                 subtype: 'ajax',
                 filter: '#content-core > *',
                 config: {mask: '#834b2d'}
             });
-            $('#breadcrumb-active').html($('.bdiv h1').html());
+            $('#breadcrumb-active').html(ctitle);
+            $('#ctitle').html(ctitle);
         });
 
         if (window.location.hash != 'c' + url_id) {

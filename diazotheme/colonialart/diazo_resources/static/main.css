@@ -14,6 +14,7 @@ color: red;
 #portal-globalnav, #portal-globalnav li a {
   color: #fff;
   background-color: #7A663B;
+  border-right: none;
 }
 #portal-globalnav .selected a,
 #portal-globalnav .selected a:hover,
@@ -216,12 +217,12 @@ table.citem td {
 }
 .archive_list ul li.aparent:before {
     content: " \25bc ";
-    color: #666;
+    color: #7a663b;
     padding: 0 0.5em 0 0;
 }
 .archive_list ul li.aparent.hidden:before {
     content: " \25b6 ";
-    color: #666;
+    color: #7a663b;
     padding: 0 0.5em 0 0;
 }
 
@@ -244,6 +245,9 @@ table.citem td {
 .bdiv {
     margin: 0 auto;
 }
+.bdiv h1 {
+    display: none;
+}
 
 #scrollable_wrapper {
     border: 1px solid #834b2d;
@@ -253,7 +257,7 @@ table.citem td {
 #preview_wrapper {
     border: 1px solid #834b2d;
     width: 100%;
-    height: 540px;
+    height: 500px;
 }
 
 .pb-ajax .artwork_view h1 {
@@ -275,16 +279,26 @@ table.citem td {
 .artwork_view a img {
     cursor: zoom-in;
 }
+div.narrow img {
+    float: left;
+}
+div.narrow div.detail {
+    float: right;
+    padding-left: 1em;
+    width: 200px;
+}
 
 #content div.bdiv h1 {
     margin-top: 0;
 }
 
 .pb-ajax h1, .pb-ajax h2, .pb-ajax h3, .pb-ajax dt, .pb-ajax a, .pb-ajax a:link, .pb-ajax a:visited,
-#content h1, #content h2, #content h3, #content a, #content a:link, #content a:visited {
+#content h1, #content h2, #content h3, #content a, #content a:link, #content a:visited,
+#portal-breadcrumbs a, #portal-breadcrumbs a:link, #portal-breadcrumbs a:visited {
     color: #7A663B;
 }
-#content a:hover {
+#content a:hover,
+#portal-breadcrumbs a:hover {
     color: #834b2d !important;
 }
 
@@ -295,4 +309,8 @@ div.listingBar a {
 
 #content a.link-overlay {
     border-bottom: none !important;
+}
+
+.archive_list {
+    color: #7a663b;
 }
