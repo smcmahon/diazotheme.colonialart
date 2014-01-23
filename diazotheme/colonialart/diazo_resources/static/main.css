@@ -288,6 +288,13 @@ div.narrow div.detail {
     width: 200px;
 }
 
+div.detail dl dt {
+    margin-top: 0.5em;
+}
+div.detail dl dd {
+    text-align: justify;
+}
+
 #content div.bdiv h1 {
     margin-top: 0;
 }
@@ -297,7 +304,11 @@ div.narrow div.detail {
 #portal-breadcrumbs a, #portal-breadcrumbs a:link, #portal-breadcrumbs a:visited {
     color: #7A663B;
 }
+.detail a {
+    border-bottom: 1px solid #7a663b;
+}
 #content a:hover,
+.pb-ajax a:hover,
 #portal-breadcrumbs a:hover {
     color: #834b2d !important;
 }
@@ -313,4 +324,11 @@ div.listingBar a {
 
 .archive_list {
     color: #7a663b;
+}
+
+#LSResult {
+    margin: -0.5em 0 0 -7em;
+    position: absolute;
+    right: 0;
+    z-index: 10;
 }
