@@ -37,7 +37,7 @@ $(function() {
         image_wrap.load(url + " #content-core > *", function () {
             var ctitle = $('.bdiv h1').html();
 
-            $('table.preview-image-wrapper a').prepOverlay({
+            $('table.preview-image-wrapper a:not(.nooverlay)').prepOverlay({
                 subtype: 'ajax',
                 filter: '#content-core > *',
 		width: '890px',

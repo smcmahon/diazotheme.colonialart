@@ -320,7 +320,9 @@ h1, h2, h3, h4, h5, h6,
 #content, #portal-breadcrumbs {
     color: #834B2D;
 }
-#portal-siteactions a:link, portal-siteactions a:visited,
+#content dd, .pb-ajax dd {
+    color: #000 !important;
+}
 #portal-footer-wrapper a:link, #portal-footer-wrapper a:visited,
 #content a:link, #content a:visited, dl.portlet a:link, dl.portlet a:visited,
 #portal-breadcrumbs a:link, #portal-breadcrumbs a:visited {
@@ -337,7 +339,42 @@ h1, h2, h3, h4, h5, h6,
     border-bottom: 1px solid #834B2D !important;
 }
 
-.overlay a {
+#portal-siteactions a:link, #portal-siteactions a:visited, #portal-siteactions a:hover,
+#content dd a:link, #content dd a:visited, #content dd a:hover,
+.pb-ajax dd a:link, .pb-ajax dd a:visited, .pb-ajax dd a:hover {
     color: #000 !important;
     border-color: #000 !important;
+}
+
+div#scrollable_wrapper a, div#scrollable_wrapper a:hover {
+    border: none !important;
+}
+
+div.portlet-static-footer,
+div#portal-footer {
+    background-color: #7A663B;
+    border: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+fieldset#artworks-search-field {
+    border: medium none !important;
+    text-align: center;
+}
+
+#artworks-search-field label,
+#artworks-search-field select {
+    font-size: 200% !important;
+}
+#artworks-search-field label {
+    padding-right: 1em;
+}
+#artworks-search-field select {
+    width: 16em;
+    margin-bottom: 0.5em;
+}
+
+#content table.invisible a {
+    border: none !important;
 }
