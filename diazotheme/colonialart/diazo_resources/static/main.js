@@ -40,6 +40,7 @@ $(function() {
             $('table.preview-image-wrapper a').prepOverlay({
                 subtype: 'ajax',
                 filter: '#content-core > *',
+		width: '890px',
                 config: {mask: '#834b2d'}
             });
             $('#breadcrumb-active').html(ctitle);

@@ -20,16 +20,14 @@ color: red;
 #portal-globalnav .selected a:hover,
 #portal-globalnav a:hover {
   background-color: #834B2D;
-  color: #fff;
+  color: #fff !important;
 }
 
 #portal-globalnav li a {
   padding: 0.5em 1em;
+  text-align: center;
 }
 
-.citem a {
-    border: none !important;
-    text-decoration: none;
 }
 table.citem {
     background-color: #fff;
@@ -195,9 +193,6 @@ table.citem td {
     background: url(nav-right.png) no-repeat 0 25%;
 }
 
-#image_wrap td a {
-    color: #7A663B !important;
-}
 #image_wrap td {
   padding-top: 12px;
 }
@@ -217,12 +212,10 @@ table.citem td {
 }
 .archive_list ul li.aparent:before {
     content: " \25bc ";
-    color: #7a663b;
     padding: 0 0.5em 0 0;
 }
 .archive_list ul li.aparent.hidden:before {
     content: " \25b6 ";
-    color: #7a663b;
     padding: 0 0.5em 0 0;
 }
 
@@ -257,7 +250,7 @@ table.citem td {
 #preview_wrapper {
     border: 1px solid #834b2d;
     width: 100%;
-    height: 500px;
+    height: 550px;
 }
 
 .pb-ajax .artwork_view h1 {
@@ -299,36 +292,52 @@ div.detail dl dd {
     margin-top: 0;
 }
 
-.pb-ajax h1, .pb-ajax h2, .pb-ajax h3, .pb-ajax dt, .pb-ajax a, .pb-ajax a:link, .pb-ajax a:visited,
-#content h1, #content h2, #content h3, #content a, #content a:link, #content a:visited,
-#portal-breadcrumbs a, #portal-breadcrumbs a:link, #portal-breadcrumbs a:visited {
-    color: #7A663B;
-}
 .detail a {
     border-bottom: 1px solid #7a663b;
-}
-#content a:hover,
-.pb-ajax a:hover,
-#portal-breadcrumbs a:hover {
-    color: #834b2d !important;
 }
 
 div.listingBar a {
     color: #7A663B;
     border-color: #7a663b;
 }
-
-#content a.link-overlay {
-    border-bottom: none !important;
+div.listingBar a:hover {
+    color: white !important;
+    background-color: #834B2D;
+    border-color: #7a663b;
 }
 
-.archive_list {
-    color: #7a663b;
-}
 
 #LSResult {
     margin: -0.5em 0 0 -7em;
     position: absolute;
     right: 0;
     z-index: 10;
+}
+
+.overlay,
+#content .documentDescription, #content #description,
+h1, h2, h3, h4, h5, h6,
+#content, #portal-breadcrumbs {
+    color: #834B2D;
+}
+#portal-siteactions a:link, portal-siteactions a:visited,
+#portal-footer-wrapper a:link, #portal-footer-wrapper a:visited,
+#content a:link, #content a:visited, dl.portlet a:link, dl.portlet a:visited,
+#portal-breadcrumbs a:link, #portal-breadcrumbs a:visited {
+    color: #834B2D;
+    border-bottom: 1px solid #834B2D;
+}
+#portal-siteactions a:hover,
+#portal-footer-wrapper a:hover,
+#content a:hover, dl.portlet a:hover {
+    color: #7a663b !important;
+    border-bottom: 1px solid #7a663b !important;
+}
+#content a.link-overlay {
+    border-bottom: 1px solid #834B2D !important;
+}
+
+.overlay a {
+    color: #000 !important;
+    border-color: #000 !important;
 }
