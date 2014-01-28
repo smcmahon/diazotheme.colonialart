@@ -378,3 +378,12 @@ fieldset#artworks-search-field {
 #content table.invisible a {
     border: none !important;
 }
+
+#portal-siteactions {
+    font-size: 70%;
+    margin-top: 1.5em;
+    text-align: right;
+}
+#portal-siteactions a:link, #portal-siteactions a:visited, #portal-siteactions a:hover {
+    color: #666 !important;
+}
