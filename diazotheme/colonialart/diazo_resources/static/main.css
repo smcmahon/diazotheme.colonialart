@@ -276,9 +276,8 @@ div.narrow img {
     float: left;
 }
 div.narrow div.detail {
-    float: right;
+    float: left;
     padding-left: 1em;
-    width: 200px;
 }
 
 div.detail dl dt {
