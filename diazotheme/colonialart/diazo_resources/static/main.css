@@ -386,3 +386,21 @@ fieldset#artworks-search-field {
 #portal-siteactions a:link, #portal-siteactions a:visited, #portal-siteactions a:hover {
     color: #666 !important;
 }
+
+body.template-folder_listing.section-galleries span.documentByLine,
+body.template-folder_listing.section-galleries span.summary img {
+    display: none;
+}
+body.template-folder_listing.section-galleries span.summary {
+    font-size: 150%;
+}
+body.template-folder_listing.section-galleries span.summary a {
+    color: #834B2D !important;
+    font-weight: normal;
+}
+body.template-folder_listing.section-galleries #content-core dt {
+    line-height: 200%;
+}
+body.template-folder_listing.section-galleries #content-core dt span.summary:before {
+    content: " \2756 ";
+}
