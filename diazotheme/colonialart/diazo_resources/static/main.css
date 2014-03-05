@@ -319,14 +319,22 @@ h1, h2, h3, h4, h5, h6,
 #content, #portal-breadcrumbs {
     color: #834B2D;
 }
+h1.documentFirstHeading, h1, h2 {
+    border-bottom: 1px solid #7A663B;
+    margin-bottom: 0.5em;
+}
 #content dd, .pb-ajax dd {
     color: #000 !important;
 }
 #portal-footer-wrapper a:link, #portal-footer-wrapper a:visited,
 #content a:link, #content a:visited, dl.portlet a:link, dl.portlet a:visited,
-#portal-breadcrumbs a:link, #portal-breadcrumbs a:visited {
+#portal-breadcrumbs a:link, #portal-breadcrumbs a:visited,
+h2 a, h3 a, h4 a {
     color: #834B2D;
-    border-bottom: 1px solid #834B2D;
+    border-bottom: 1px solid #834B2D !important;
+}
+.breadcrumbSeparator {
+    color: #834B2D;
 }
 #portal-siteactions a:hover,
 #portal-footer-wrapper a:hover,
@@ -374,9 +382,11 @@ fieldset#artworks-search-field {
     margin-bottom: 0.5em;
 }
 
+/*
 #content table.invisible a {
     border: none !important;
 }
+*/
 
 #portal-siteactions {
     font-size: 70%;
@@ -399,7 +409,7 @@ body.template-folder_listing.section-galleries span.summary a {
     font-weight: normal;
 }
 body.template-folder_listing.section-galleries #content-core dt {
-    line-height: 200%;
+    line-height: 400%;
 }
 body.template-folder_listing.section-galleries #content-core dt span.summary:before {
     content: " \2756 ";

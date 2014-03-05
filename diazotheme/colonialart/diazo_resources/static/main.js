@@ -128,5 +128,15 @@ $(function() {
 
     $('.archive_list ul:hidden').prev().addClass('hidden');
 
+
+    $('img.image-right, img.image-left, img.image-inline')
+        .not('a img')
+        .filter('[src*="image_"]')
+        .prepOverlay({
+            subtype: 'image',
+            urlmatch: '/image_.+$',
+            urlreplace: '/image_large'
+            });
+
 });
 
