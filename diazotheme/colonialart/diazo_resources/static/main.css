@@ -329,9 +329,13 @@ h1.documentFirstHeading, h1, h2 {
 #portal-footer-wrapper a:link, #portal-footer-wrapper a:visited,
 #content a:link, #content a:visited, dl.portlet a:link, dl.portlet a:visited,
 #portal-breadcrumbs a:link, #portal-breadcrumbs a:visited,
-h2 a, h3 a, h4 a {
+h3 a, h4 a {
     color: #834B2D;
     border-bottom: 1px solid #834B2D !important;
+}
+#content h1 a:link, #content h2 a:link,
+#content h1 a:visited, #content h2 a:visited {
+    border-bottom: none !important;
 }
 .breadcrumbSeparator {
     color: #834B2D;
