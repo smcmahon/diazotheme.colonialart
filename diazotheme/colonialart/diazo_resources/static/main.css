@@ -328,11 +328,16 @@ h1.documentFirstHeading, h1, h2 {
 }
 #portal-footer-wrapper a:link, #portal-footer-wrapper a:visited,
 #content a:link, #content a:visited, dl.portlet a:link, dl.portlet a:visited,
-#portal-breadcrumbs a:link, #portal-breadcrumbs a:visited,
-h3 a, h4 a {
+#portal-breadcrumbs a:link, #portal-breadcrumbs a:visited {
+    color: #834B2D;
+    border-bottom: 1px solid #834B2D;
+}
+body.section-references h3 a:link, body.section-references h4 a:link,
+body.section-references h3 a:visited, body.section-references h4 a:visited {
     color: #834B2D;
     border-bottom: 1px solid #834B2D !important;
 }
+
 #content h1 a:link, #content h2 a:link,
 #content h1 a:visited, #content h2 a:visited {
     border-bottom: none !important;
