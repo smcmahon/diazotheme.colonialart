@@ -423,3 +423,7 @@ body.template-folder_listing.section-galleries #content-core dt {
 body.template-folder_listing.section-galleries #content-core dt span.summary:before {
     content: " \2756 ";
 }
+
+body.template-artwork_view div.documentDescription {
+    display: none;
+}

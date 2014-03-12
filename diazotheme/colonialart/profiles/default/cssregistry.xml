@@ -28,6 +28,6 @@
     id="++theme++diazotheme.colonialart/static/main.css"
     media="screen" rel="stylesheet" rendering="import"
     cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression="" />
+    enabled="1" expression="" applyPrefix="True" />
 
 </object>
