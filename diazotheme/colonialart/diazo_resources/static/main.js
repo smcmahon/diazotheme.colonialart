@@ -138,5 +138,7 @@ $(function() {
             urlreplace: '/image_large'
             });
 
+    $('a > img').parent().css('border', 'none');
+
 });
 
